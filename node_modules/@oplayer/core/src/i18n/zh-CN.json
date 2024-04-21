@@ -1,0 +1,34 @@
+{
+  "Play": "播放",
+  "Pause": "暂停",
+  "Loop": "循环播放",
+  "Volume": "音量",
+  "Volume: %s": "音量：%s",
+  "Mute": "静音",
+  "Speed": "播放速度",
+  "LIVE": "直播",
+
+  "Language": "语言",
+  "Screenshot": "截图",
+  "Subtitle": "字幕",
+  "Quality": "画质",
+  "Fullscreen": "全屏",
+  "TextDecoder Not Supported": "不支持原生字幕",
+  "Settings": "设置",
+  "Picture in Picture": "画中画",
+
+  "Danmaku": "弹幕",
+  "Display": "显示",
+  "Opacity": "透明度",
+  "FontSize": "字体大小",
+  "Display Area": "显示区域",
+
+  "Off": "关闭",
+  "Auto": "自动",
+  "Default": "默认",
+  "Normal": "正常",
+
+  "%ss": "%s秒",
+  "Close": "关闭",
+  "Can be closed after %ss": "%s秒后可关闭广告"
+}

@@ -171,7 +171,7 @@ console.log(resp)
 
   const fetchImdbData = async () => {
     if (data?.imdb_id) {
-      const url = `https://imdb-api.tprojects.workers.dev/title/${data?.imdb_id}`;
+      const url = `https://github.com/tuhinpal/imdb-api/title/${data?.imdb_id}`;
       let req = await fetch(url);
       let res = await req.json();
       setImdbData(res);
@@ -205,9 +205,9 @@ console.log(resp)
             onLoadCapture={handleIframe}
               className="p-2 w-full h-[270px] lg:h-[872px] mx-auto"
 
-              src={`https://vidsrc.cc/v2/embed/movie/${id}`}
+              src={`https://vidsrc.xyz/embed/movie/${id}`}
 
-              // src={`https://vidsrc.to/embed/movie/${id}`}
+              // src={`https://vidsrc.xyz/embed/movie/${id}`}
               allowFullScreen
             ></iframe>
             {/* <EnimePlayer subtitles={subtitles()} src={"https://ottocors.vercel.app/cors?url=https://tc-1.dayimage.net/_v6/380ccc6aa21d4e175c3ebbf36eb393af084ce3306d32c57b77f505d8efa16912eae144c75c5ade7b13650b17dcf40835ef450fe3ee65a3e131368f85213a25a32c278706ad24a408390dd213c35d9a6782294bd8e1b9751f2d95fec0ad3045054c047845049a3843204568183c0a93366fb074a9d9cb60b776336e9e525dddde/master.m3u8"} poster="" title={data?.title}/> */}
