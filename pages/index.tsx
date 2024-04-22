@@ -55,32 +55,32 @@ console.log(CurrentState)
 
 
   const topR = async () => {
-    let req  = await fetch(`https://api.themoviedb.org/3/${fetchRatedType}/top_rated?page=1&api_key=cfe422613b250f702980a3bbf9e90716`)
+    let req  = await fetch (`https://api.themoviedb.org/3/discover/movie?page=1&api_key=cfe422613b250f702980a3bbf9e90716&with_companies=34`)
     let res = await req.json()
     console.log(res)
     setTopRated(res.results)
 }
 
   const ComedyShows = async () => {
-    let req  = await fetch `https://api.themoviedb.org/3/discover/tv?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=35&without_genres=16`;
+    let req  = await fetch (`https://api.themoviedb.org/3/discover/tv?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=35&without_genres=16&with_networks=213`);
     let res = await req.json();
     console.log(res);
     setComedyShows(res.results)
   }
   const fetchDramaShows = async () => {
-    let url = `https://api.themoviedb.org/3/discover/tv?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=18`;
+    let url = `https://api.themoviedb.org/3/discover/tv?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=18&with_networks=213`;
     let req = await fetch(url);
     let res = await req.json();
     setDramaShows(res.results);
   };
   const fetchTrendingMovies = async () => {
-    let url = `https://api.themoviedb.org/3/trending/movie/week?api_key=cfe422613b250f702980a3bbf9e90716`;
+    let url = `https://api.themoviedb.org/3/discover/movie?&api_key=cfe422613b250f702980a3bbf9e90716&with_companies=25`;
     let req = await fetch(url);
     let res = await req.json();
     setTrendingMovies(res.results);
   };
   const fetchAnimesMovies = async () => {
-    let url = `https://api.themoviedb.org/3/discover/movie?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&https://api.themoviedb.org/3/discover/movie?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=16&with_keywords=210024|287501&with_companies=33%7C34%7C486%7C25%7C35%7C2230%7C670%7C174%7C17%7C1957%7C2785%7C3592%7C8298
+    let url = `https://api.themoviedb.org/3/discover/movie?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=16&with_keywords=210024|287501&with_companies=33%7C34%7C486%7C25%7C35%7C2230%7C670%7C174%7C17%7C1957%7C2785%7C3592%7C8298
     with_genres=16&with_keywords=210024|287501`;
     let req = await fetch(url);
     let res = await req.json();
@@ -96,7 +96,7 @@ console.log(CurrentState)
   };
 
   const fetchPopularMovies = async () => {
-    let url = `https://api.themoviedb.org/3/${fetchPopularType}/popular?api_key=cfe422613b250f702980a3bbf9e90716&with_networks=213`;
+    let url = `https://api.themoviedb.org/3/discover/movie?api_key=cfe422613b250f702980a3bbf9e90716&with_companies=174`;
     let req = await fetch(url);
     let res = await req.json();
     setPopularMovies(res.results);
@@ -120,10 +120,10 @@ console.log(CurrentState)
 
 <HomeContainer swiperId={0} Data={sortedList} heading="Continue Watching" />
 
-      <HomeContainer swiperId={1} Data={trendingMovies} heading="Trending Movies" />
+      <HomeContainer swiperId={1} Data={trendingMovies} heading="Early 2000's Movies" />
       <HomeContainer swiperId={2} Data={dramaShows} heading="Drama Shows" />
       <HomeContainer swiperId={3} Data={popularMovies} heading="Popular Movies" />
-      <HomeContainer swiperId={4} Data={topRated} heading="Top Rated" />
+      <HomeContainer swiperId={4} Data={topRated} heading="Sony Pictures" />
       <HomeContainer swiperId={5} Data={comedyShows} heading="Comedy Shows" />
       <HomeContainer swiperId={6} Data={latestMovies} heading="Upcoming Movies" />
       <HomeContainer swiperId={7} Data={animeShows} heading="Anime Shows" />
