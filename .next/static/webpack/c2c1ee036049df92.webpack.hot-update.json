@@ -1,0 +1,1 @@
+{"c":["pages/index","webpack"],"r":["pages/genre/[...slug]"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2Fworkspaces%2FGYPSYAVENGER%2Fpages%2Fgenre%2F%5B...slug%5D.tsx&page=%2Fgenre%2F%5B...slug%5D!","./pages/genre/[...slug].tsx"]}

@@ -1,0 +1,1 @@
+{"c":["pages/index","webpack"],"r":["pages/movie/[id]"],"m":["./components/Trailer.tsx","./components/details/DetailContainer.tsx","./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2Fworkspaces%2FGYPSYAVENGER%2Fpages%2Fmovie%2F%5Bid%5D.tsx&page=%2Fmovie%2F%5Bid%5D!","./pages/movie/[id].tsx","./redux/actions/tvShowAction.ts"]}

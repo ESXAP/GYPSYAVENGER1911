@@ -25,7 +25,7 @@ function Movies() {
     }
 
     const fetchMovies = async () => {
-      let req  = await axios.get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=${page}&api_key=cfe422613b250f702980a3bbf9e90716`)
+      let req  = await axios.get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&with_companies=33%7C34%7C486%7C25%7C35%7C2230%7C670%7C174%7C17%7C1957%7C2785%7C3592%7C8298&page=${page}&api_key=cfe422613b250f702980a3bbf9e90716`)
       let res = req.data
       setData(res.results)
   }

@@ -10,20 +10,33 @@ function Search() {
   const { slug } = router.query;
 
   useEffect(() => {
-    fetchMovies();
+    if (slug && slug[0]) {
+      fetchMovies(slug[0]);
+    }
   }, [slug]);
 
-  const fetchMovies = async () => {
-    let url = `https://api.themoviedb.org/3/search/multi?query=${
-      slug && slug[0]
-    }&api_key=cfe422613b250f702980a3bbf9e90716`;
-    let req = await fetch(url);
-    let res = await req.json();
-    console.log(res);
-    setData(res.results);
+  const fetchMovies = async (query: string) => {
+    const movieUrl = `https://api.themoviedb.org/3/search/multi?query=${query}&api_key=cfe422613b250f702980a3bbf9e90716`;
+    const tvUrl = `https://api.themoviedb.org/3/discover/tv?with_networks=213&query=${query}&api_key=cfe422613b250f702980a3bbf9e90716`;
+
+    try {
+      const [movieReq, tvReq] = await Promise.all([
+        fetch(movieUrl),
+        fetch(tvUrl),
+      ]);
+
+      const [movieRes, tvRes] = await Promise.all([movieReq.json(), tvReq.json()]);
+
+      const movieResults = movieRes.results || [];
+      const tvResults = tvRes.results || [];
+
+      const combinedResults = [...movieResults, ...tvResults];
+
+      setData(combinedResults);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
-  console.log(slug);
-  console.log(data);
 
   return (
     <Layout title={"Showing Results"}>
