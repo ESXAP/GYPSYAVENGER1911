@@ -62,13 +62,13 @@ console.log(CurrentState)
 }
 
   const ComedyShows = async () => {
-    let req  = await fetch(`https://api.themoviedb.org/4/discover/${fetchComedyType}?vote_average.gte=7.5&with_original_language=en&with_genres=35&without_genres=16&api_key=cfe422613b250f702980a3bbf9e90716`)
+    let req  = await fetch `https://api.themoviedb.org/3/discover/tv?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=35&without_genres=16`;
     let res = await req.json();
     console.log(res);
     setComedyShows(res.results)
   }
   const fetchDramaShows = async () => {
-    let url = `https://api.themoviedb.org/4/discover/tv?vote_average.gte=7.5&with_original_language=en&with_genres=18&api_key=cfe422613b250f702980a3bbf9e90716`;
+    let url = `https://api.themoviedb.org/3/discover/tv?api_key=cfe422613b250f702980a3bbf9e90716&language=en-US&page=1&with_genres=18`;
     let req = await fetch(url);
     let res = await req.json();
     setDramaShows(res.results);
