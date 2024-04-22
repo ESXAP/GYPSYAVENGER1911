@@ -75,10 +75,10 @@ const handleMovieCategory = (e:any) => {
         <div className="flex flex-col  ">
           <div className="p-4 border-b-[2px] border-[#22222278]">
             <h1
-              className="text-white font-bold text-2xl cursor-pointer text-center"
+              className="text-red font-bold text-2xl cursor-pointer text-center"
               onClick={h.handleSideNav}
             >
-              OTMOVIES
+              NETFLIX
             </h1>
           </div>
 
