@@ -32,8 +32,8 @@ function Sidebar(t:SideBarProps) {
       <div className="flex items-center gap-6">
         <div className="font-black text-white cursor-pointer" onClick={t.handleSideNav}><FaBars size={22} strokeWidth={2}/></div>
         <Link href={`/`}>
-          <span className="hidden md:block text-white font-bold text-2xl cursor-pointer">
-            OTTOMOVIES
+          <span className="hidden md:block text-red font-bold text-2xl cursor-pointer">
+            NETFLIX
           </span>
         </Link>
       </div>
